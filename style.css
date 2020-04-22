@@ -1,0 +1,156 @@
+body,
+html {
+  height: 100%;
+  font-family: "Manrope", sans-serif;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://cdn.glitch.com/f888ab6c-f229-4674-a550-77833bc34a9e%2Fbackgroundwater.jpg?v=1587305571507");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background: linear-gradient(to top, #8d837c 0%, #ccccc9 100%);
+ */
+}
+
+.dark1 {
+  background-color: #5b7375;
+  text-shadow: 1px 2px 3px black;
+}
+
+.link-color {
+  color: #d4dfe1;
+  
+}
+
+.p-color {
+  background-color: #213b3a;
+  color: #d4dfe1;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 96vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: left;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: 0.2s;
+  /*         font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s; */
+  font-size: 12px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  text-shadow: 2px 2px #213b3a;
+}
+
+/* Flex Items */
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*   .panel > *:first-child { transform: translateY(-100%); }
+    
+    
+    .panel.open-active > *:first-child { transform: translateY(0); } */
+
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel p {
+/*   text-transform: uppercase; */
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+
+  
+}
+
+.panel p:nth-child(2) {
+  font-size: 2em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .panel p {
+    font-size: 1em;
+  }
+}
+
+.instructions{
+  text-align: left;
+  font-size: 20px;
+  padding-left: 30px;
+   color: #d4dfe1;
+}
+
+
+/* .first-two {
+  text-align: center;
+  height: 2.75em;
+  font-size: 2em;
+  border: 2px solid #93a6a8;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  line-height: 1em;
+  color: #5b7375;
+  border-radius: 9px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 2em;
+} */
+
+/* .second-two {
+  text-align: center;
+  height: 2.75em;
+  font-size: 2em;
+  border: 2px solid #d4dfe1;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  line-height: 1em;
+  color: #d4dfe1;
+  border-radius: 9px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 2em;
+}
+ */
